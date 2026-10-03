@@ -1,0 +1,59 @@
+`timescale 1ns/1ps
+module Adder_32bit_8_stage_test;
+
+reg clk; reg rst; reg [31:0] a; reg [31:0] b; reg cin;
+wire [31:0] sum; wire cout;
+
+Adder_32bit_8_stage uut ( .clk(clk), .rst(rst), .a(a), .b(b), .cin(cin), .sum(sum), .cout(cout));
+always begin
+    #5 clk = ~clk;
+end
+
+reg [31:0] a_q [0:8]; reg [31:0] b_q [0:8]; reg c_q [0:8]; integer k;
+always @(posedge clk) begin
+    a_q[0] <= a; b_q[0] <= b; c_q[0] <= cin;
+    for (k = 0; k < 8; k = k + 1) begin
+        a_q[k+1] <= a_q[k];
+        b_q[k+1] <= b_q[k];
+        c_q[k+1] <= c_q[k];
+    end
+end
+
+reg [32:0] expected; integer errors;
+task apply(input [31:0] ta, input [31:0] tb, input tc);
+begin
+    @(posedge clk);
+    a = ta; 
+    b = tb; 
+    cin = tc;
+end
+endtask
+
+initial begin
+    clk = 0; rst = 0; a = 0; b = 0; cin = 0; errors = 0; #12; rst = 1;
+    apply(32'h00000000, 32'h00000000, 1'b0);
+    apply(32'h00000001, 32'h00000001, 1'b0);
+    apply(32'hFFFFFFFF, 32'h00000001, 1'b0);
+    apply(32'hFFFFFFFF, 32'hFFFFFFFF, 1'b1);
+    apply(32'h12345678, 32'h87654321, 1'b0);
+    apply(32'hAAAAAAAA, 32'h55555555, 1'b1);  
+    repeat (10) @(posedge clk);
+
+    if (errors == 0)
+        $display("PASS: all 32-bit additions matched across the 8-stage pipeline");
+    else
+        $display("FAIL: %0d mismatch(es) detected", errors);
+        
+    $finish;
+end
+always @(posedge clk) begin
+    expected = a_q[8] + b_q[8] + c_q[8];
+    if (rst && (sum !== expected[31:0] || cout !== expected[32])) begin
+        $display("Time=%0t MISMATCH: a=%h b=%h cin=%b -> sum=%h cout=%b (expected sum=%h cout=%b)",
+                 $time, a_q[8], b_q[8], c_q[8], sum, cout, expected[31:0], expected[32]);
+        errors = errors + 1;
+    end
+end
+
+endmodule
+

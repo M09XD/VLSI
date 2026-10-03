@@ -1,0 +1,40 @@
+ncsim: 10.20-s100: (c) Copyright 1995-2011 Cadence Design Systems, Inc.
+
+-------------------------------------
+Relinquished control to SimVision...
+ncsim> 
+ncsim> database -open waves -into waves.shm -default
+Created default SHM database waves
+ncsim> probe -create -shm multiplier4_test.a multiplier4_test.b multiplier4_test.prod
+Created probe 1
+ncsim> run 80ns
+Time = 0 | a = 0000 ( 0) | b = 0101 ( 5) | prod = 00000000 (  0)
+Time = 10000 | a = 0111 ( 7) | b = 0001 ( 1) | prod = 00000111 (  7)
+Time = 20000 | a = 0011 ( 3) | b = 0100 ( 4) | prod = 00001100 ( 12)
+Time = 30000 | a = 1100 (12) | b = 0101 ( 5) | prod = 00111100 ( 60)
+Time = 40000 | a = 1111 (15) | b = 1111 (15) | prod = 11100001 (225)
+Time = 50000 | a = 1001 ( 9) | b = 1001 ( 9) | prod = 01010001 ( 81)
+Simulation complete via $finish(1) at time 60 NS + 0
+./4Bit-Multiplier_test.v:28     $finish;
+ncsim> run -adjacent
+ncsim: *E,RNFNSH: Cannot continue simulation due to a previous $finish.
+ncsim> run -adjacent
+ncsim: *E,RNFNSH: Cannot continue simulation due to a previous $finish.
+ncsim> run -adjacent
+ncsim: *E,RNFNSH: Cannot continue simulation due to a previous $finish.
+ncsim> run -adjacent
+ncsim: *E,RNFNSH: Cannot continue simulation due to a previous $finish.
+ncsim> run -adjacent
+ncsim: *E,RNFNSH: Cannot continue simulation due to a previous $finish.
+ncsim> run -next
+ncsim: *E,RNFNSH: Cannot continue simulation due to a previous $finish.
+ncsim> run -next
+ncsim: *E,RNFNSH: Cannot continue simulation due to a previous $finish.
+ncsim> run -step
+ncsim: *E,RNFNSH: Cannot continue simulation due to a previous $finish.
+ncsim> run -step
+ncsim: *E,RNFNSH: Cannot continue simulation due to a previous $finish.
+ncsim> ^C
+ncsim> exit
+ncsim: Memory Usage - 20.7M program + 32.0M data = 52.6M total
+ncsim: CPU Usage - 5.9s system + 14.8s user = 20.8s total (347.6s, 6.0% cpu)

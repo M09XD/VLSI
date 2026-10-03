@@ -1,0 +1,55 @@
+`timescale 1ns/1ps
+
+module d_ff_test;
+
+reg d;
+reg clk;
+reg rst;
+
+wire q;
+
+d_ff uut (
+    .q(q),
+    .d(d),
+    .clk(clk),
+    .rst(rst)
+);
+
+// Clock generation logic
+always begin
+    #5 clk = ~clk;
+end
+
+initial begin
+
+    $monitor("Time = %0t | rst = %b | clk = %b | d = %b | q = %b",
+             $time, rst, clk, d, q);
+
+    // Initialize inputs
+    clk = 0;
+    rst = 0;
+    d   = 0;
+    #10;
+
+    // Release reset
+    rst = 1;
+    #10;
+
+    // Test 1: Set D to 1
+    d   = 1;
+    #10;
+
+    // Test 2: Set D to 0
+    d   = 0;
+    #10;
+
+    // Test 3: Set D to 1
+    d   = 1;
+    #10;
+
+    $finish;
+
+end
+
+endmodule
+

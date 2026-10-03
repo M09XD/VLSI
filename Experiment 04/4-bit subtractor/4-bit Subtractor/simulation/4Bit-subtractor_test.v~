@@ -1,0 +1,66 @@
+`timescale 1ns/1ps
+
+module subtractor4_test;
+
+reg [3:0] a;
+reg [3:0] b;
+reg bin;
+
+wire [3:0] diff;
+wire bout;
+
+subtractor4 uut (
+    .a(a),
+    .b(b),
+    .bin(bin),
+    .diff(diff),
+    .bout(bout)
+);
+
+initial begin
+
+    $monitor("Time = %0t | a = %b | b = %b | bin = %b | diff = %b | bout = %b",
+             $time, a, b, bin, diff, bout);
+
+    // Test 1: Simple subtraction without borrow (5 - 3 = 2)
+    a   = 4'b0101;
+    b   = 4'b0011;
+    bin = 0;
+    #10;
+
+    // Test 2: Subtraction with bin active (7 - 2 - 1 = 4)
+    a   = 4'b0111;
+    b   = 4'b0010;
+    bin = 1;
+    #10;
+
+    // Test 3: Subtraction resulting in zero (4 - 4 = 0)
+    a   = 4'b0100;
+    b   = 4'b0100;
+    bin = 0;
+    #10;
+
+    // Test 4: Generating an output borrow/underflow (2 - 5 = -3 -> diff=13, bout=1)
+    a   = 4'b0010;
+    b   = 4'b0101;
+    bin = 0;
+    #10;
+
+    // Test 5: Minimum value minus maximum value (0 - 15 = -15 -> diff=1, bout=1)
+    a   = 4'b0000;
+    b   = 4'b1111;
+    bin = 0;
+    #10;
+
+    // Test 6: Maximum underflow state with bin active (0 - 0 - 1 = -1 -> diff=15, bout=1)
+    a   = 4'b0000;
+    b   = 4'b0000;
+    bin = 1;
+    #10;
+
+    $finish;
+
+end
+
+endmodule
+

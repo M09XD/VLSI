@@ -1,0 +1,24 @@
+hal: 10.20-s100: (c) Copyright 1995-2011 Cadence Design Systems, Inc.
+Incisive HDL Simulator
+hal: Options:   -cdslib /home/sudipto-uiu/Desktop/Experiment 05/4-bit Counter/simulation/cds.lib -logfile hal.log worklib.counter_4bit_test:module.
+hal: Snapshot:  worklib.counter_4bit_test:module.
+hal: Workspace: /home/sudipto-uiu/Desktop/Experiment 05/4-bit Counter/simulation.
+hal: Date: Wed Sep 30 03:51:36 BDT 2026.
+
+hal: Running on elaborated SNAPSHOT.....
+
+  ==========================================================================
+Performing lint checks 
+
+halcheck: 10.20-s100: (c) Copyright 1995-2011 Cadence Design Systems, Inc.
+halcheck() [0x80e195c]
+halcheck() [0x80e1a17]
+[0xb7744400]
+halcheck(halserror+0x5f) [0x80be51e]
+halcheck() [0x8089977]
+halcheck(main+0xe9) [0x80889fc]
+/lib/libc.so.6(__libc_start_main+0xe6) [0x664d26]
+halcheck() [0x80885a1]
+halcheck: *F,HALSIG: Unable to proceed further due to a critical error. Contact Cadence Design Systems for resolution to this problem.
+Analysis failed.
+

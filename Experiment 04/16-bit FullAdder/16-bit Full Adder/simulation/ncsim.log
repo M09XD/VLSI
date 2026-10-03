@@ -1,0 +1,22 @@
+ncsim: 10.20-s100: (c) Copyright 1995-2011 Cadence Design Systems, Inc.
+
+-------------------------------------
+Relinquished control to SimVision...
+ncsim> 
+ncsim> database -open waves -into waves.shm -default
+Created default SHM database waves
+ncsim> probe -create -shm fulladder16_test.a fulladder16_test.b fulladder16_test.cin fulladder16_test.cout fulladder16_test.sum
+Created probe 1
+ncsim> run 80ns
+Time = 0 | a = 0000000011111111 | b = 0000000000000001 | cin = 0 | sum = 0000000100000000 | cout = 0
+Time = 10000 | a = 1111111111111111 | b = 0000000000000000 | cin = 1 | sum = 0000000000000000 | cout = 1
+Time = 20000 | a = 0111111111111111 | b = 0000000000000001 | cin = 0 | sum = 1000000000000000 | cout = 0
+Time = 30000 | a = 1000000000000000 | b = 1000000000000000 | cin = 0 | sum = 0000000000000000 | cout = 1
+Time = 40000 | a = 1111111111111111 | b = 1111111111111111 | cin = 1 | sum = 1111111111111111 | cout = 1
+Time = 50000 | a = 0000000000000000 | b = 0000000000000000 | cin = 0 | sum = 0000000000000000 | cout = 0
+Simulation complete via $finish(1) at time 60 NS + 0
+./16Bit-FullAdder_test.v:26     $finish;
+ncsim> ^C
+ncsim> exit
+ncsim: Memory Usage - 20.7M program + 32.0M data = 52.7M total
+ncsim: CPU Usage - 14.4s system + 33.6s user = 48.0s total (811.3s, 5.9% cpu)

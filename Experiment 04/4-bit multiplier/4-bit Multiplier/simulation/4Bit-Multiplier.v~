@@ -1,0 +1,12 @@
+`timescale 1ns/1ps
+
+module multiplier4 (
+    input [3:0] a,
+    input [3:0] b,
+    output [7:0] prod
+);
+
+assign prod = a * b;
+
+endmodule
+

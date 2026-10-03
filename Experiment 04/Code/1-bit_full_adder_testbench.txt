@@ -1,0 +1,61 @@
+`timescale 1ns/1ps
+
+module fulladder_test;
+
+reg a;
+reg b;
+reg cin;
+
+wire sum;
+wire carry;
+
+fulladder uut (
+    .a(a),
+    .b(b),
+    .cin(cin),
+    .sum(sum),
+    .carry(carry)
+);
+
+initial begin
+
+    $monitor("Time = %0t | a = %b | b = %b | cin = %b | sum = %b | carry = %b",
+             $time, a, b, cin, sum, carry);
+
+    // Test 1: 0 + 0 + 0 = 0, Carry = 0
+    a = 0; b = 0; cin = 0;
+    #10;
+
+    // Test 2: 0 + 0 + 1 = 1, Carry = 0
+    a = 0; b = 0; cin = 1;
+    #10;
+
+    // Test 3: 0 + 1 + 0 = 1, Carry = 0
+    a = 0; b = 1; cin = 0;
+    #10;
+
+    // Test 4: 0 + 1 + 1 = 0, Carry = 1
+    a = 0; b = 1; cin = 1;
+    #10;
+
+    // Test 5: 1 + 0 + 0 = 1, Carry = 0
+    a = 1; b = 0; cin = 0;
+    #10;
+
+    // Test 6: 1 + 0 + 1 = 0, Carry = 1
+    a = 1; b = 0; cin = 1;
+    #10;
+
+    // Test 7: 1 + 1 + 0 = 0, Carry = 1
+    a = 1; b = 1; cin = 0;
+    #10;
+
+    // Test 8: 1 + 1 + 1 = 1, Carry = 1
+    a = 1; b = 1; cin = 1;
+    #10;
+
+    $finish;
+
+end
+
+endmodule

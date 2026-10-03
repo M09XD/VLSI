@@ -1,0 +1,31 @@
+`timescale 1ns/1ps
+module fulladder4_test;
+
+reg [3:0] a; reg [3:0] b; reg cin;
+wire [3:0] sum; wire carry;
+
+fulladder4 uut (
+    .a(a),
+    .b(b),
+    .cin(cin),
+    .sum(sum),
+    .carry(carry)
+);
+
+initial begin
+
+    $monitor("Time = %0t | a = %b | b = %b | cin = %b | sum = %b | carry = %b",
+             $time, a, b, cin, sum, carry);
+
+    a   = 4'b0010; b   = 4'b0011; cin = 0; #10;
+    a   = 4'b0101; b   = 4'b0100; cin = 1; #10;
+    a   = 4'b0111; b   = 4'b0001; cin = 0; #10;
+    a   = 4'b1000; b   = 4'b1000; cin = 0; #10;
+    a   = 4'b1111; b   = 4'b1111; cin = 1; #10;
+    a   = 4'b0000; b   = 4'b0000; cin = 0; #10;
+    $finish;
+
+end
+
+endmodule
+

@@ -1,0 +1,146 @@
+#Copyright notice: Copyright 1997-2010 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+
+ovf_setup -ungroup_separator { _ }
+
+ovf_seq_merge \
+-module { Adder_32bit_8_stage } \
+-from { { sum_pipe_reg[0][0] P } { sum_pipe_reg[0][1] P } { sum_pipe_reg[0][2] P } { sum_pipe_reg[0][3] P } { sum_pipe_reg[0][4] P } { sum_pipe_reg[0][5] P } { sum_pipe_reg[0][6] P } { sum_pipe_reg[0][7] P } { sum_pipe_reg[0][8] P } { sum_pipe_reg[0][9] P } { sum_pipe_reg[0][10] P } { sum_pipe_reg[0][11] P } { sum_pipe_reg[0][12] P } { sum_pipe_reg[0][13] P } { sum_pipe_reg[0][14] P } { sum_pipe_reg[0][15] P } { sum_pipe_reg[0][16] P } { sum_pipe_reg[0][17] P } { sum_pipe_reg[0][18] P } { sum_pipe_reg[0][19] P } { sum_pipe_reg[0][20] P } { sum_pipe_reg[0][21] P } { sum_pipe_reg[0][22] P } { sum_pipe_reg[0][23] P } { sum_pipe_reg[0][24] P } { sum_pipe_reg[0][25] P } { sum_pipe_reg[0][26] P } { sum_pipe_reg[0][27] P } { sum_pipe_reg[0][28] P } { sum_pipe_reg[0][29] P } { sum_pipe_reg[0][30] P } { sum_pipe_reg[0][31] P } } \
+-to { { sum_pipe_reg[0][0] } }
+
+ovf_transform \
+-module { Adder_32bit_8_stage } \
+-type { tree } \
+-internal_type { 206 } \
+-internal_index { 16 } \
+-input { 4 add_37_72_I8.A } \
+-input { 4 add_37_72_I8.B } \
+-input { 1 add_37_102_I8.B } \
+-output { 5 O1 } \
+-from { \
+   { 5 add_37_72_I8 : UADD { { add_37_72_I8.A ZERO 5 } { add_37_72_I8.B ZERO 5 } } } \
+   { 5 add_37_102_I8 : UADD { { add_37_72_I8.1 } { add_37_102_I8.B ZERO 5 } } } \
+   { O1 = { add_37_102_I8.1 } } } \
+-to { \
+   { 5 addinc_add_37_102_I8_1 : UADD_CI { { add_37_72_I8.A ZERO 5 } { add_37_72_I8.B ZERO 5 } { add_37_102_I8.B ZERO 5 } } } \
+   { O1 = { addinc_add_37_102_I8_1.1 } } }
+
+ovf_transform \
+-module { Adder_32bit_8_stage } \
+-type { tree } \
+-internal_type { 206 } \
+-internal_index { 17 } \
+-input { 4 add_37_72_I7.A } \
+-input { 4 add_37_72_I7.B } \
+-input { 1 add_37_102_I7.B } \
+-output { 5 O1 } \
+-from { \
+   { 5 add_37_72_I7 : UADD { { add_37_72_I7.A ZERO 5 } { add_37_72_I7.B ZERO 5 } } } \
+   { 5 add_37_102_I7 : UADD { { add_37_72_I7.1 } { add_37_102_I7.B ZERO 5 } } } \
+   { O1 = { add_37_102_I7.1 } } } \
+-to { \
+   { 5 addinc_add_37_102_I7_2 : UADD_CI { { add_37_72_I7.A ZERO 5 } { add_37_72_I7.B ZERO 5 } { add_37_102_I7.B ZERO 5 } } } \
+   { O1 = { addinc_add_37_102_I7_2.1 } } }
+
+ovf_transform \
+-module { Adder_32bit_8_stage } \
+-type { tree } \
+-internal_type { 206 } \
+-internal_index { 18 } \
+-input { 4 add_37_72_I6.A } \
+-input { 4 add_37_72_I6.B } \
+-input { 1 add_37_102_I6.B } \
+-output { 5 O1 } \
+-from { \
+   { 5 add_37_72_I6 : UADD { { add_37_72_I6.A ZERO 5 } { add_37_72_I6.B ZERO 5 } } } \
+   { 5 add_37_102_I6 : UADD { { add_37_72_I6.1 } { add_37_102_I6.B ZERO 5 } } } \
+   { O1 = { add_37_102_I6.1 } } } \
+-to { \
+   { 5 addinc_add_37_102_I6_3 : UADD_CI { { add_37_72_I6.A ZERO 5 } { add_37_72_I6.B ZERO 5 } { add_37_102_I6.B ZERO 5 } } } \
+   { O1 = { addinc_add_37_102_I6_3.1 } } }
+
+ovf_transform \
+-module { Adder_32bit_8_stage } \
+-type { tree } \
+-internal_type { 206 } \
+-internal_index { 19 } \
+-input { 4 add_37_72_I5.A } \
+-input { 4 add_37_72_I5.B } \
+-input { 1 add_37_102_I5.B } \
+-output { 5 O1 } \
+-from { \
+   { 5 add_37_72_I5 : UADD { { add_37_72_I5.A ZERO 5 } { add_37_72_I5.B ZERO 5 } } } \
+   { 5 add_37_102_I5 : UADD { { add_37_72_I5.1 } { add_37_102_I5.B ZERO 5 } } } \
+   { O1 = { add_37_102_I5.1 } } } \
+-to { \
+   { 5 addinc_add_37_102_I5_4 : UADD_CI { { add_37_72_I5.A ZERO 5 } { add_37_72_I5.B ZERO 5 } { add_37_102_I5.B ZERO 5 } } } \
+   { O1 = { addinc_add_37_102_I5_4.1 } } }
+
+ovf_transform \
+-module { Adder_32bit_8_stage } \
+-type { tree } \
+-internal_type { 206 } \
+-internal_index { 20 } \
+-input { 4 add_37_72_I4.A } \
+-input { 4 add_37_72_I4.B } \
+-input { 1 add_37_102_I4.B } \
+-output { 5 O1 } \
+-from { \
+   { 5 add_37_72_I4 : UADD { { add_37_72_I4.A ZERO 5 } { add_37_72_I4.B ZERO 5 } } } \
+   { 5 add_37_102_I4 : UADD { { add_37_72_I4.1 } { add_37_102_I4.B ZERO 5 } } } \
+   { O1 = { add_37_102_I4.1 } } } \
+-to { \
+   { 5 addinc_add_37_102_I4_5 : UADD_CI { { add_37_72_I4.A ZERO 5 } { add_37_72_I4.B ZERO 5 } { add_37_102_I4.B ZERO 5 } } } \
+   { O1 = { addinc_add_37_102_I4_5.1 } } }
+
+ovf_transform \
+-module { Adder_32bit_8_stage } \
+-type { tree } \
+-internal_type { 206 } \
+-internal_index { 21 } \
+-input { 4 add_37_72_I3.A } \
+-input { 4 add_37_72_I3.B } \
+-input { 1 add_37_102_I3.B } \
+-output { 5 O1 } \
+-from { \
+   { 5 add_37_72_I3 : UADD { { add_37_72_I3.A ZERO 5 } { add_37_72_I3.B ZERO 5 } } } \
+   { 5 add_37_102_I3 : UADD { { add_37_72_I3.1 } { add_37_102_I3.B ZERO 5 } } } \
+   { O1 = { add_37_102_I3.1 } } } \
+-to { \
+   { 5 addinc_add_37_102_I3_6 : UADD_CI { { add_37_72_I3.A ZERO 5 } { add_37_72_I3.B ZERO 5 } { add_37_102_I3.B ZERO 5 } } } \
+   { O1 = { addinc_add_37_102_I3_6.1 } } }
+
+ovf_transform \
+-module { Adder_32bit_8_stage } \
+-type { tree } \
+-internal_type { 206 } \
+-internal_index { 22 } \
+-input { 4 add_37_72_I1.A } \
+-input { 4 add_37_72_I1.B } \
+-input { 1 add_37_102_I1.B } \
+-output { 5 O1 } \
+-from { \
+   { 5 add_37_72_I1 : UADD { { add_37_72_I1.A ZERO 5 } { add_37_72_I1.B ZERO 5 } } } \
+   { 5 add_37_102_I1 : UADD { { add_37_72_I1.1 } { add_37_102_I1.B ZERO 5 } } } \
+   { O1 = { add_37_102_I1.1 } } } \
+-to { \
+   { 5 addinc_add_37_102_I1_7 : UADD_CI { { add_37_72_I1.A ZERO 5 } { add_37_72_I1.B ZERO 5 } { add_37_102_I1.B ZERO 5 } } } \
+   { O1 = { addinc_add_37_102_I1_7.1 } } }
+
+ovf_transform \
+-module { Adder_32bit_8_stage } \
+-type { tree } \
+-internal_type { 206 } \
+-internal_index { 23 } \
+-input { 4 add_37_72_I2.A } \
+-input { 4 add_37_72_I2.B } \
+-input { 1 add_37_102_I2.B } \
+-output { 5 O1 } \
+-from { \
+   { 5 add_37_72_I2 : UADD { { add_37_72_I2.A ZERO 5 } { add_37_72_I2.B ZERO 5 } } } \
+   { 5 add_37_102_I2 : UADD { { add_37_72_I2.1 } { add_37_102_I2.B ZERO 5 } } } \
+   { O1 = { add_37_102_I2.1 } } } \
+-to { \
+   { 5 addinc_add_37_102_I2_8 : UADD_CI { { add_37_72_I2.A ZERO 5 } { add_37_72_I2.B ZERO 5 } { add_37_102_I2.B ZERO 5 } } } \
+   { O1 = { addinc_add_37_102_I2_8.1 } } }
+

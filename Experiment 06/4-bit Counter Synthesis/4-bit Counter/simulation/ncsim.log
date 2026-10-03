@@ -1,0 +1,31 @@
+ncsim: 10.20-s100: (c) Copyright 1995-2011 Cadence Design Systems, Inc.
+
+-------------------------------------
+Relinquished control to SimVision...
+ncsim> 
+ncsim> database -open waves -into waves.shm -default
+Created default SHM database waves
+ncsim> probe -create -shm counter_4bit_test.clk counter_4bit_test.count counter_4bit_test.rst
+Created probe 1
+ncsim> run 80ns
+Time = 0 | rst = 0 | clk = 0 | count = 0000 (0)
+Time = 5000 | rst = 0 | clk = 1 | count = 0000 (0)
+Time = 10000 | rst = 1 | clk = 0 | count = 0000 (0)
+Time = 15000 | rst = 1 | clk = 1 | count = 0001 (1)
+Time = 20000 | rst = 1 | clk = 0 | count = 0001 (1)
+Time = 25000 | rst = 1 | clk = 1 | count = 0010 (2)
+Time = 30000 | rst = 1 | clk = 0 | count = 0010 (2)
+Time = 35000 | rst = 1 | clk = 1 | count = 0011 (3)
+Time = 40000 | rst = 1 | clk = 0 | count = 0011 (3)
+Time = 45000 | rst = 1 | clk = 1 | count = 0100 (4)
+Time = 50000 | rst = 1 | clk = 0 | count = 0100 (4)
+Time = 55000 | rst = 1 | clk = 1 | count = 0101 (5)
+Time = 60000 | rst = 1 | clk = 0 | count = 0101 (5)
+Time = 65000 | rst = 1 | clk = 1 | count = 0110 (6)
+Time = 70000 | rst = 1 | clk = 0 | count = 0110 (6)
+Time = 75000 | rst = 1 | clk = 1 | count = 0111 (7)
+Ran until 80 NS + 0
+ncsim> ^C
+ncsim> exit
+ncsim: Memory Usage - 20.7M program + 31.9M data = 52.5M total
+ncsim: CPU Usage - 161.7s system + 32.4s user = 194.2s total (1855.9s, 10.5% cpu)

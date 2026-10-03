@@ -1,0 +1,30 @@
+ncsim: 10.20-s100: (c) Copyright 1995-2011 Cadence Design Systems, Inc.
+
+-------------------------------------
+Relinquished control to SimVision...
+ncsim> 
+ncsim> database -open waves -into waves.shm -default
+Created default SHM database waves
+ncsim> probe -create -shm jk_ff_test.clk jk_ff_test.j jk_ff_test.k jk_ff_test.q jk_ff_test.qbar jk_ff_test.rst
+Created probe 1
+ncsim> run 80ns
+Time = 0 | rst = 0 | clk = 0 | j = 0 | k = 0 | q = 0 | qbar = 1
+Time = 5000 | rst = 0 | clk = 1 | j = 0 | k = 0 | q = 0 | qbar = 1
+Time = 10000 | rst = 1 | clk = 0 | j = 0 | k = 0 | q = 0 | qbar = 1
+Time = 15000 | rst = 1 | clk = 1 | j = 0 | k = 0 | q = 0 | qbar = 1
+Time = 20000 | rst = 1 | clk = 0 | j = 1 | k = 0 | q = 0 | qbar = 1
+Time = 25000 | rst = 1 | clk = 1 | j = 1 | k = 0 | q = 1 | qbar = 0
+Time = 30000 | rst = 1 | clk = 0 | j = 0 | k = 0 | q = 1 | qbar = 0
+Time = 35000 | rst = 1 | clk = 1 | j = 0 | k = 0 | q = 1 | qbar = 0
+Time = 40000 | rst = 1 | clk = 0 | j = 0 | k = 1 | q = 1 | qbar = 0
+Time = 45000 | rst = 1 | clk = 1 | j = 0 | k = 1 | q = 0 | qbar = 1
+Time = 50000 | rst = 1 | clk = 0 | j = 1 | k = 1 | q = 0 | qbar = 1
+Time = 55000 | rst = 1 | clk = 1 | j = 1 | k = 1 | q = 1 | qbar = 0
+Time = 60000 | rst = 1 | clk = 0 | j = 1 | k = 1 | q = 1 | qbar = 0
+Time = 65000 | rst = 1 | clk = 1 | j = 1 | k = 1 | q = 0 | qbar = 1
+Simulation complete via $finish(1) at time 70 NS + 0
+./jk_ff_test.v:25     $finish;
+ncsim> ^C
+ncsim> exit
+ncsim: Memory Usage - 20.7M program + 32.0M data = 52.6M total
+ncsim: CPU Usage - 29.1s system + 10.3s user = 39.4s total (364.5s, 10.8% cpu)
