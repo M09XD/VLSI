@@ -1,4 +1,6 @@
+<div align="center">
 # VLSI Design Laboratory
+</div>
 
 <p align="center">
   <img src="https://img.shields.io/badge/VLSI-Design%20Lab-5B5BD6?style=for-the-badge&logo=verilog" alt="VLSI Design Lab" />
