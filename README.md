@@ -21,6 +21,73 @@ This repository is a complete academic VLSI design portfolio containing lab work
 - Pipelined datapath optimization
 - Physical design concepts including placement, CTS, routing, and verification
 
+## Lab Snapshots and Design Showcase
+
+This repository captures the complete learning arc of a VLSI design course: from transistor-level CMOS understanding to synthesis, datapath optimization, and physical design thinking. The screenshots below are representative of the real lab work stored in this archive and are designed to make the project more visually compelling for GitHub visitors.
+
+### Experiment 01 — CMOS Logic Foundations
+
+<img src="Experiment%2001/NOT%20Gate/Not_gate%20inverter%20Screenshot.png" alt="CMOS inverter schematic" width="48%" />
+<img src="Experiment%2001/NOT%20Gate/Not_gate%20inverter_test_Graph%20Screenshot.png" alt="CMOS inverter waveform output" width="48%" />
+
+The first experiment introduces the CMOS inverter and logic fundamentals, showing how complementary transistor behavior defines digital switching and logic-level operation.
+
+### Experiment 02 — Continuation and Practice
+
+The second stage continues the learning flow with extended coursework material and design continuity. It reinforces the core digital IC concepts before moving into more complex circuit structures and HDL-based implementations.
+
+### Experiment 03 — Multiplexer Design and Simulation
+
+<img src="Experiment%2003/MUX%202-1/mux2-1%20NCLaunch%20window%20Screenshot.png" alt="MUX simulation interface" width="48%" />
+<img src="Experiment%2003/MUX%202-1/mux2-1_test%20graph%20SimVision%20Screenshot.png" alt="MUX waveform output" width="48%" />
+
+The multiplexer experiments cover 2:1, 4:1, and 8:1 data selection logic, highlighting control-driven signal routing and waveform validation.
+
+### Experiment 04 — Arithmetic Datapath and Adders
+
+<img src="Experiment%2004/HalfAdder/halfadder%20Source%20Code%20Screenshot.png" alt="Half adder source code" width="48%" />
+<img src="Experiment%2004/HalfAdder/halfadder_test%20graph%20SimVision%20window%20Screenshot.png" alt="Half adder waveform" width="48%" />
+
+This set of labs builds from a simple half-adder to multi-bit adders, subtractors, and multipliers. It demonstrates how combinational datapaths scale from primitive logic to practical arithmetic hardware.
+
+### Experiment 05 — Sequential Logic and Counters
+
+<img src="Experiment%2005/4-bit%20Counter/4-bit%20counter%20NCLaunch%20window%20Screenshot.png" alt="Counter simulation environment" width="48%" />
+<img src="Experiment%2005/4-bit%20Counter/4-bit%20counter_test%20graph%20SimVision%20window%20Screenshot.png" alt="Counter waveform" width="48%" />
+
+Sequential logic is explored through D flip-flops, JK flip-flops, and a 4-bit counter. These labs focus on clocking, state transitions, reset behavior, and timing-aware verification.
+
+### Experiment 06 — Synthesis and Timing Analysis
+
+<img src="Experiment%2006/4-bit%20Counter%20Synthesis/4-bit%20counter%20RTL%20Compiler%20Schematic%20Screenshot.png" alt="RTL compiler schematic" width="48%" />
+<img src="Experiment%2006/4-bit%20Counter%20Synthesis/4-bit%20counter%20rc%20terminal%20output%20timing%20and%20power%20report%20Screenshot.png" alt="Timing and power report" width="48%" />
+
+This experiment moves the design from logic evaluation into standard-cell synthesis, where the RTL is mapped to a gate-level implementation and assessed for delay and power trade-offs.
+
+### Experiment 07 — Pipelined 32-bit Adder
+
+<img src="Experiment%2007/8-stage%2032-bit%20Adder/8-stage%2032-bit%20adder%20Source%20Code%20Screenshot%201.png" alt="Pipelined adder source" width="48%" />
+<img src="Experiment%2007/8-stage%2032-bit%20Adder/8-stage%2032-bit%20adder_test%20graph%20SimVision%20window%20Screenshot%2006(sum).png" alt="Pipelined adder waveform" width="48%" />
+
+Experiment 07 focuses on multi-stage datapath design, illustrating carry propagation, latency, and the push toward timing-aware structured digital design using pipelined arithmetic blocks.
+
+### Experiment 08 — Physical Design and Implementation Flow
+
+This final experiment introduces the physical design mindset: floorplanning, placement, clock tree synthesis, routing, and verification. It closes the loop from logic design to silicon-ready implementation planning.
+
+## Experiment Coverage Map
+
+| Experiment | Focus | Representative Evidence |
+| --- | --- | --- |
+| 01 | CMOS logic and inverter behavior | Schematic + waveform screenshots |
+| 02 | Continued design practice | Course continuation material |
+| 03 | Multiplexer design | NCLaunch and SimVision screenshots |
+| 04 | Arithmetic circuits | Half adder and datapath screenshots |
+| 05 | Sequential logic | Counter and flip-flop simulation screenshots |
+| 06 | RTL synthesis | RTL compiler schematic and timing report |
+| 07 | Pipelined datapath | RTL source and waveform screenshots |
+| 08 | Physical design flow | Final implementation and design report |
+
 ## Course Context
 
 - Course: VLSI Design
