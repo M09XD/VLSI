@@ -26,6 +26,7 @@ This repository is a complete academic VLSI design portfolio containing lab work
 - Physical design concepts including placement, CTS, routing, and verification
 
 <div align="center">
+  
 ## Lab Snapshots and Design Showcase
 
 This repository captures the complete learning arc of a VLSI design course: from transistor-level CMOS understanding to synthesis, datapath optimization, and physical design thinking. The screenshots below are representative of the real lab work stored in this archive and are designed to make the project more visually compelling for GitHub visitors.
