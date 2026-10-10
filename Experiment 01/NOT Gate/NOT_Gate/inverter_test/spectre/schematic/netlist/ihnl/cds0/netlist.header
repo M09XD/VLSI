@@ -1,5 +1,0 @@
-
-// Library name: NOT_Gate
-// Cell name: inverter
-// View name: schematic
-subckt inverter In Out VDD VSS

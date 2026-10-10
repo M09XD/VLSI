@@ -1,7 +1,0 @@
-// Generated for: spectre
-// Generated on: Sep  6 07:12:22 2026
-// Design library name: NOT_Gate
-// Design cell name: inverter_test
-// Design view name: schematic
-simulator lang=spectre
-global 0
