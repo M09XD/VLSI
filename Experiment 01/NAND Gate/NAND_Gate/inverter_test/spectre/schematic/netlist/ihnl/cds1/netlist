@@ -1,0 +1,10 @@
+
+// Library name: NAND_Gate
+// Cell name: inverter_test
+// View name: schematic
+I0 (net3 0 A B Output) inverter
+V0 (net3 0) vsource dc=1.8 type=dc
+V1 (A 0) vsource type=pulse val0=0 val1=1.8 period=20n rise=50p fall=50p \
+        width=10n
+V2 (B 0) vsource type=pulse val0=0 val1=1.8 period=40n rise=50p fall=50p \
+        width=20n
