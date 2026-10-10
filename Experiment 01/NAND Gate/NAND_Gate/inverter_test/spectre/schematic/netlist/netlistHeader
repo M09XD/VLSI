@@ -1,7 +1,0 @@
-// Generated for: spectre
-// Generated on: Oct 10 11:30:27 2026
-// Design library name: NAND_Gate
-// Design cell name: inverter_test
-// Design view name: schematic
-simulator lang=spectre
-global 0
