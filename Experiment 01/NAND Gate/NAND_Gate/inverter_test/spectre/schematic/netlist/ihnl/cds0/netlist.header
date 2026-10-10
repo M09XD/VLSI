@@ -1,5 +1,0 @@
-
-// Library name: NAND_Gate
-// Cell name: inverter
-// View name: schematic
-subckt inverter VDD VSS A B Output
