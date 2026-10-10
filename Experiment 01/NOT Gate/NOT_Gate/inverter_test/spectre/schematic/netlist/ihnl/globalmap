@@ -1,0 +1,10 @@
+CADENCE IHNL01070
+$model
+NOT_Gate/inverter_test/schematic inverter_test
+NOT_Gate/inverter/schematic inverter
+$endmodel
+$net
+gnd! 0
+$endnet
+$param
+$endparam
