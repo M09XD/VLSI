@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      sudipto-uiu
+HostName                       cadence
+ProcessIdentifier              9689
+ProcessCreationTime_UTC        1791613290
+ProcessCreationTime_Readable   Sat Oct 10 12:21:30 2026 BDT
+AppIdentifier                  OA File System Design Manager
+OSType                         unix
+ReasonForPlacingEditLock       OpenAccess edit lock
+FilePathUsedToEditLock         /home/sudipto-uiu/AND_Gate/inverter_test/schematic/sch.oa.cdslck.dirlck
+TimeEditLocked                 Sat Oct 10 13:02:43 2026 BDT
