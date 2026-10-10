@@ -1,0 +1,5 @@
+
+// Library name: OR_Gate
+// Cell name: inverter
+// View name: schematic
+subckt inverter VDD VSS A B Output

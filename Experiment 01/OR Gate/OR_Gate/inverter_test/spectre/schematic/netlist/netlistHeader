@@ -1,0 +1,7 @@
+// Generated for: spectre
+// Generated on: Oct 10 12:59:19 2026
+// Design library name: OR_Gate
+// Design cell name: inverter_test
+// Design view name: schematic
+simulator lang=spectre
+global 0

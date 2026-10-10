@@ -1,0 +1,186 @@
+
+Cadence (R) Virtuoso (R) Spectre (R) Circuit Simulator
+Version 12.1.0.347.isr3 32bit -- 10 Jan 2013
+Copyright (C) 1989-2012 Cadence Design Systems, Inc. All rights reserved worldwide. Cadence, Virtuoso and Spectre are registered trademarks of Cadence Design Systems, Inc. All others are the property of their respective holders.
+
+Protected by U.S. Patents: 
+        5,610,847; 5,790,436; 5,812,431; 5,859,785; 5,949,992; 5,987,238; 
+        6,088,523; 6,101,323; 6,151,698; 6,181,754; 6,260,176; 6,278,964; 
+        6,349,272; 6,374,390; 6,493,849; 6,504,885; 6,618,837; 6,636,839; 
+        6,778,025; 6,832,358; 6,851,097; 6,928,626; 7,024,652; 7,035,782; 
+        7,085,700; 7,143,021; 7,493,240; 7,571,401.
+
+Includes RSA BSAFE(R) Cryptographic or Security Protocol Software from RSA Security, Inc.
+
+User: sudipto-uiu   Host: cadence   HostID: 7F0100   PID: 10110
+Memory  available: 5.0929 GB  physical: 6.3095 GB
+CPU Type: AMD Ryzen 5 3400G with Radeon Vega Graphics    
+          Processor PhysicalID CoreID Frequency
+              0         0        0     3693.0
+              1         0        1     3693.0
+
+
+Simulating `input.scs' on cadence at 12:59:20 PM, Sat Oct 10, 2026 (process id: 10110).
+Current working directory: /home/sudipto-uiu/OR_Gate/inverter_test/spectre/schematic/netlist.
+Command line:
+     \
+        /home/sudipto-uiu/cadence/MMSIM121/tools.lnx86/spectre/bin/32bit/spectre  \
+        input.scs +escchars +log ../psf/spectre.out +inter=mpsc  \
+        +mpssession=spectre5_9689_3 -format psfxl -raw ../psf  \
+        +lqtimeout 900 -maxw 5 -maxn 5
+spectre pid = 10110
+
+Loading /home/sudipto-uiu/cadence/MMSIM121/tools.lnx86/cmi/lib/5.0/libinfineon_sh.so ...
+Loading /home/sudipto-uiu/cadence/MMSIM121/tools.lnx86/cmi/lib/5.0/libphilips_o_sh.so ...
+Loading /home/sudipto-uiu/cadence/MMSIM121/tools.lnx86/cmi/lib/5.0/libphilips_sh.so ...
+Loading /home/sudipto-uiu/cadence/MMSIM121/tools.lnx86/cmi/lib/5.0/libsparam_sh.so ...
+Loading /home/sudipto-uiu/cadence/MMSIM121/tools.lnx86/cmi/lib/5.0/libstmodels_sh.so ...
+Reading file:  /home/sudipto-uiu/OR_Gate/inverter_test/spectre/schematic/netlist/input.scs
+Reading file:  /home/sudipto-uiu/cadence/gpdk090_v4.6/models/spectre/gpdk090.scs
+Reading file:  /home/sudipto-uiu/cadence/gpdk090_v4.6/models/spectre/gpdk090_mos.scs
+Reading file:  /home/sudipto-uiu/cadence/gpdk090_v4.6/models/spectre/gpdk090_mos_iso.scs
+Reading file:  /home/sudipto-uiu/cadence/gpdk090_v4.6/models/spectre/gpdk090_resistor.scs
+Reading file:  /home/sudipto-uiu/cadence/gpdk090_v4.6/models/spectre/resd_va.va
+Reading link:  /home/sudipto-uiu/cadence/MMSIM121/tools.lnx86/spectre/etc/ahdl/discipline.h
+Reading file:  /home/sudipto-uiu/cadence/MMSIM121/tools.lnx86/spectre/etc/ahdl/disciplines.vams
+Reading link:  /home/sudipto-uiu/cadence/MMSIM121/tools.lnx86/spectre/etc/ahdl/constants.h
+Reading file:  /home/sudipto-uiu/cadence/MMSIM121/tools.lnx86/spectre/etc/ahdl/constants.vams
+Reading file:  /home/sudipto-uiu/cadence/gpdk090_v4.6/models/spectre/rnoise_va.va
+Reading file:  /home/sudipto-uiu/cadence/gpdk090_v4.6/models/spectre/gpdk090_capacitor.scs
+Reading file:  /home/sudipto-uiu/cadence/gpdk090_v4.6/models/spectre/gpdk090_diode.scs
+Reading file:  /home/sudipto-uiu/cadence/gpdk090_v4.6/models/spectre/gpdk090_bipolar.scs
+
+Time for NDB Parsing: CPU = 409.936 ms, elapsed = 399.066 ms.
+Time accumulated: CPU = 409.936 ms, elapsed = 399.066 ms.
+Peak resident memory used = 32.3 Mbytes.
+
+
+Time for Elaboration: CPU = 23.997 ms, elapsed = 25.321 ms.
+Time accumulated: CPU = 435.933 ms, elapsed = 424.788 ms.
+Peak resident memory used = 34.8 Mbytes.
+
+
+Time for EDB Visiting: CPU = 0 s, elapsed = 744.82 us.
+Time accumulated: CPU = 436.933 ms, elapsed = 426.092 ms.
+Peak resident memory used = 35.1 Mbytes.
+
+
+Warning from spectre during initial setup.
+    WARNING (CMI-2477): I0.PM0: `Rds' = 10.9859 uOhm is less than 0.001. Set to 0.
+
+
+Circuit inventory:
+              nodes 6
+            bsim3v3 6     
+            vsource 3     
+
+
+Warning from spectre during initial setup.
+    WARNING (CMI-2477): I0.PM0: `Rds' = 10.9859 uOhm is less than 0.001. Set to 0.
+
+
+Time for parsing: CPU = 2.998 ms, elapsed = 8.52394 ms.
+Time accumulated: CPU = 441.931 ms, elapsed = 435.284 ms.
+Peak resident memory used = 35.8 Mbytes.
+
+Entering remote command mode using MPSC service (spectre, ipi, v0.0, spectre5_9689_3, ).
+
+Warning from spectre.
+    WARNING (SPECTRE-16707): Only tran supports psfxl format, result of other analyses will be in psfbin format.
+
+
+*************************************************
+Transient Analysis `tran': time = (0 s -> 200 ns)
+*************************************************
+DC simulation time: CPU = 1 ms, elapsed = 625.849 us.
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 200 ns
+    step = 200 ps
+    maxstep = 4 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+    tran: time = 5.167 ns    (2.58 %), step = 1.62 ns      (810 m%)
+    tran: time = 15.37 ns    (7.69 %), step = 2.63 ns      (1.32 %)
+    tran: time = 25.92 ns      (13 %), step = 1.822 ns     (911 m%)
+    tran: time = 37.38 ns    (18.7 %), step = 3.611 ns     (1.81 %)
+    tran: time = 45 ns       (22.5 %), step = 1.569 ns     (785 m%)
+    tran: time = 55.22 ns    (27.6 %), step = 2.556 ns     (1.28 %)
+    tran: time = 65.93 ns      (33 %), step = 1.824 ns     (912 m%)
+    tran: time = 77.38 ns    (38.7 %), step = 3.611 ns     (1.81 %)
+    tran: time = 85 ns       (42.5 %), step = 1.569 ns     (784 m%)
+    tran: time = 95.22 ns    (47.6 %), step = 2.556 ns     (1.28 %)
+    tran: time = 105.9 ns      (53 %), step = 1.824 ns     (912 m%)
+    tran: time = 117.4 ns    (58.7 %), step = 3.611 ns     (1.81 %)
+    tran: time = 125 ns      (62.5 %), step = 1.569 ns     (784 m%)
+    tran: time = 135.2 ns    (67.6 %), step = 2.556 ns     (1.28 %)
+    tran: time = 145.9 ns      (73 %), step = 1.824 ns     (912 m%)
+    tran: time = 157.4 ns    (78.7 %), step = 3.611 ns     (1.81 %)
+    tran: time = 165 ns      (82.5 %), step = 1.569 ns     (784 m%)
+    tran: time = 175.2 ns    (87.6 %), step = 2.556 ns     (1.28 %)
+    tran: time = 185.9 ns      (93 %), step = 1.824 ns     (912 m%)
+    tran: time = 197.4 ns    (98.7 %), step = 3.611 ns     (1.81 %)
+Number of accepted tran steps =             722
+
+Notice from spectre during transient analysis `tran'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
+Initial condition solution time: CPU = 1 ms, elapsed = 663.042 us.
+Intrinsic tran analysis time:    CPU = 73.989 ms, elapsed = 90.0271 ms.
+Total time required for tran analysis `tran': CPU = 76.989 ms, elapsed = 93.276 ms.
+Time accumulated: CPU = 522.92 ms, elapsed = 605.969 ms.
+Peak resident memory used = 37.4 Mbytes.
+
+finalTimeOP: writing operating point information to rawfile.
+
+******************
+DC Analysis `dcOp'
+******************
+Important parameter values:
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    gmindc = 1 pS
+Convergence achieved in 9 iterations.
+Total time required for dc analysis `dcOp': CPU = 3.999 ms, elapsed = 3.78609 ms.
+Time accumulated: CPU = 537.917 ms, elapsed = 643.516 ms.
+Peak resident memory used = 37.5 Mbytes.
+
+dcOpInfo: writing operating point information to rawfile.
+
+Error found by spectre during DC analysis `dc'.
+    ERROR (SFE-421): Undefined parameter name `dc'.
+
+Analysis `dc' was terminated prematurely due to an error.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+Aggregate audit (1:02:24 PM, Sat Oct 10, 2026):
+Time used: CPU = 636 ms, elapsed = 185 s (3m  4.7s), util. = 344e-03%.
+Time spent in licensing: elapsed = 322 ms.
+Peak memory used = 37.6 Mbytes.
+Simulation started at: 12:59:20 PM, Sat Oct 10, 2026, ended at: 1:02:24 PM, Sat Oct 10, 2026, with elapsed time (wall clock): 185 s (3m  4.7s).
+spectre completes with 1 error, 3 warnings, and 1 notice.
