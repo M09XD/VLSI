@@ -1,0 +1,5 @@
+
+// Library name: XOR
+// Cell name: inverter
+// View name: schematic
+subckt XOR_inverter_schematic A B VDD VSS Output

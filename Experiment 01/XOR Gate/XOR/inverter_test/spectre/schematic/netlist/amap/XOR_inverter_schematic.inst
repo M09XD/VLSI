@@ -1,0 +1,10 @@
+HEADER
+"PSFversion" "1.00"
+"I0n" "inverter"
+"I2n I1n" "inverter_schematic"
+"I4n I3n" "NOT_Gate_inverter_schematic"
+"Av" ":1v"
+"Bv" ":2v"
+"VDDv" ":3v"
+"VSSv" ":4v"
+"Voutv" ":5v"

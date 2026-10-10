@@ -1,0 +1,13 @@
+CADENCE IHNL01070
+$model
+XOR/inverter/schematic XOR_inverter_schematic
+NOT_Gate/inverter/schematic NOT_Gate_inverter_schematic
+OR_Gate/inverter/schematic inverter
+XOR/inverter_test/schematic inverter_test
+AND_Gate/inverter/schematic inverter_schematic
+$endmodel
+$net
+gnd! 0
+$endnet
+$param
+$endparam

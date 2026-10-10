@@ -1,0 +1,7 @@
+    I0 (VDD VSS net15 net14 Output) inverter
+    I2 (VDD VSS A net17 net15) inverter_schematic
+    I1 (VDD VSS net16 B net14) inverter_schematic
+    I4 (A net16 VDD VSS) NOT_Gate_inverter_schematic
+    I3 (B net17 VDD VSS) NOT_Gate_inverter_schematic
+ends XOR_inverter_schematic
+// End of subcircuit definition.

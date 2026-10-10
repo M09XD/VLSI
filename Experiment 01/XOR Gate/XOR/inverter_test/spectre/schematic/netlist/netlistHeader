@@ -1,0 +1,7 @@
+// Generated for: spectre
+// Generated on: Oct 10 10:53:42 2026
+// Design library name: XOR
+// Design cell name: inverter_test
+// Design view name: schematic
+simulator lang=spectre
+global 0

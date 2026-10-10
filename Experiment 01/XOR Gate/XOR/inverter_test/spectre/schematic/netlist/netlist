@@ -1,0 +1,71 @@
+
+// Library name: OR_Gate
+// Cell name: inverter
+// View name: schematic
+subckt inverter VDD VSS A B Output
+    PM2 (Output net05 VDD VDD) gpdk090_pmos1v w=(720n) l=100n as=201.6f \
+        ad=201.6f ps=2u pd=2u m=(1)*(1) simM=(1)*(1)
+    PM1 (net05 B net14 VDD) gpdk090_pmos1v w=(720n) l=100n as=201.6f \
+        ad=201.6f ps=2u pd=2u m=(1)*(1) simM=(1)*(1)
+    PM0 (net14 A VDD VDD) gpdk090_pmos1v w=(720n) l=100n as=201.6f \
+        ad=201.6f ps=2u pd=2u m=(1)*(1) simM=(1)*(1)
+    NM2 (Output net05 VSS VSS) gpdk090_nmos1v w=(240n) l=100n as=67.2f \
+        ad=67.2f ps=1.04u pd=1.04u m=(1)*(1) simM=(1)*(1)
+    NM1 (net05 B VSS VSS) gpdk090_nmos1v w=(240n) l=100n as=67.2f ad=67.2f \
+        ps=1.04u pd=1.04u m=(1)*(1) simM=(1)*(1)
+    NM0 (net05 A VSS VSS) gpdk090_nmos1v w=(240n) l=100n as=67.2f ad=67.2f \
+        ps=1.04u pd=1.04u m=(1)*(1) simM=(1)*(1)
+ends inverter
+// End of subcircuit definition.
+
+// Library name: AND_Gate
+// Cell name: inverter
+// View name: schematic
+subckt inverter_schematic VDD VSS A B Output
+    NM2 (Output net06 VSS VSS) gpdk090_nmos1v w=(240n) l=100n as=67.2f \
+        ad=67.2f ps=1.04u pd=1.04u m=(1)*(1) simM=(1)*(1)
+    NM1 (net15 B VSS VSS) gpdk090_nmos1v w=(240n) l=100n as=67.2f ad=67.2f \
+        ps=1.04u pd=1.04u m=(1)*(1) simM=(1)*(1)
+    NM0 (net06 A net15 VSS) gpdk090_nmos1v w=(240n) l=100n as=67.2f \
+        ad=67.2f ps=1.04u pd=1.04u m=(1)*(1) simM=(1)*(1)
+    PM2 (Output net06 VDD VDD) gpdk090_pmos1v w=(720n) l=100n as=201.6f \
+        ad=201.6f ps=2u pd=2u m=(1)*(1) simM=(1)*(1)
+    PM1 (VDD B net06 VDD) gpdk090_pmos1v w=(720n) l=100n as=201.6f \
+        ad=201.6f ps=2u pd=2u m=(1)*(1) simM=(1)*(1)
+    PM0 (net06 A VDD VDD) gpdk090_pmos1v w=(720n) l=100n as=201.6f \
+        ad=201.6f ps=2u pd=2u m=(1)*(1) simM=(1)*(1)
+ends inverter_schematic
+// End of subcircuit definition.
+
+// Library name: NOT_Gate
+// Cell name: inverter
+// View name: schematic
+subckt NOT_Gate_inverter_schematic In Out VDD VSS
+    NM0 (Out In VSS VSS) gpdk090_nmos1v w=(240n) l=100n as=67.2f ad=67.2f \
+        ps=1.04u pd=1.04u m=(1)*(1) simM=(1)*(1)
+    PM0 (Out In VDD VDD) gpdk090_pmos1v w=(720n) l=100n as=201.6f \
+        ad=201.6f ps=2u pd=2u m=(1)*(1) simM=(1)*(1)
+ends NOT_Gate_inverter_schematic
+// End of subcircuit definition.
+
+// Library name: XOR
+// Cell name: inverter
+// View name: schematic
+subckt XOR_inverter_schematic A B VDD VSS Output
+    I0 (VDD VSS net15 net14 Output) inverter
+    I2 (VDD VSS A net17 net15) inverter_schematic
+    I1 (VDD VSS net16 B net14) inverter_schematic
+    I4 (A net16 VDD VSS) NOT_Gate_inverter_schematic
+    I3 (B net17 VDD VSS) NOT_Gate_inverter_schematic
+ends XOR_inverter_schematic
+// End of subcircuit definition.
+
+// Library name: XOR
+// Cell name: inverter_test
+// View name: schematic
+I0 (A B net6 0 Output) XOR_inverter_schematic
+V0 (net6 0) vsource dc=1.8 type=dc
+V2 (B 0) vsource type=pulse val0=0 val1=1.8 period=40n rise=50p fall=50p \
+        width=20n
+V1 (A 0) vsource type=pulse val0=0 val1=1.8 period=20n rise=50p fall=50p \
+        width=10n
