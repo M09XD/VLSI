@@ -1,0 +1,10 @@
+    PM1 (Output B net14 VDD) gpdk090_pmos1v w=(720n) l=100n as=201.6f \
+        ad=201.6f ps=2u pd=2u m=(1)*(1) simM=(1)*(1)
+    PM0 (net14 A VDD VDD) gpdk090_pmos1v w=(720n) l=100n as=201.6f \
+        ad=201.6f ps=2u pd=2u m=(1)*(1) simM=(1)*(1)
+    NM1 (Output B VSS VSS) gpdk090_nmos1v w=(240n) l=100n as=67.2f \
+        ad=67.2f ps=1.04u pd=1.04u m=(1)*(1) simM=(1)*(1)
+    NM0 (Output A VSS VSS) gpdk090_nmos1v w=(240n) l=100n as=67.2f \
+        ad=67.2f ps=1.04u pd=1.04u m=(1)*(1) simM=(1)*(1)
+ends inverter
+// End of subcircuit definition.
